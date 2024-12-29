@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- should everything be placed inside a div .container or is ok to style the body directly using grid? -->
+    <!-- Header -->
+    <header class="header">
+      <div class="icon-element-container">
+        <div class="icon"><img src="./assets/icons/magnify.svg" alt="magnify lens" srcset="" /></div>
+        <input type="search" name=" searchbox" id="searchbox" />
+      </div>
+
+      <div class="user-info-small">
+        <div class="icon-element-container">
+          <div class="icon"><img src="./assets/icons/bell-ring-outline.svg" alt="notification bell" /></div>
+          <div class="avatar-img">
+            <img src="./assets/images/cowboy-7706071_640.jpg" alt="old man cowboy" />
+          </div>
+          <p class="user-full-name">Arthur Morgan</p>
+        </div>
+      </div>
+      <div class="user-info-medium">
+        <div class="avatar-img">
+          <img src="./assets/images/cowboy-7706071_640.jpg" alt="old man cowboy" />
+        </div>
+        <div class="welcome-msg-container">
+          <p class="welcome-msg">Hi there,</p>
+          <p class="user-full-name">Arthur Morgan</p>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <button type="button" class="control">new</button>
+        <button type="button" class="control">upload</button>
+        <button type="button" class="control">share</button>
+      </div>
+    </header>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="icon-element-container">
+        <div class="icon-title">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 24 28">
+            <title>view-dashboard</title>
+            <path class="filter-white" d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" />
+          </svg>
+        </div>
+        <h1>Dashboard</h1>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="icon-element-container">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 24 28">
+                    <title>home-outline</title>
+                    <path
+                      class="filter-white"
+                      d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22"
+                    />
+                  </svg>
+                </div>
+                <p>Home</p>
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><div class="icon-element-container">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 24 28">
+                    <title>clipboard-account-outline</title>
+                    <path
+                      class="filter-white"
+                      d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H9.18C9.6,1.84 10.7,1 12,1C13.3,1 14.4,1.84 14.82,3H19M12,3A1,1 0 0,0 11,4A1,1 0 0,0 12,5A1,1 0 0,0 13,4A1,1 0 0,0 12,3M7,7V5H5V19H19V5H17V7H7M12,9A2,2 0 0,1 14,11A2,2 0 0,1 12,13A2,2 0 0,1 10,11A2,2 0 0,1 12,9M8,17V16C8,14.9 9.79,14 12,14C14.21,14 16,14.9 16,16V17H8Z"
+                    />
+                  </svg>
+                </div>
+                <p>Profile</p>
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><div class="icon-element-container">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 24 28">
+                    <title>message-outline</title>
+                    <path
+                      class="filter-white"
+                      d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16Z"
+                    />
+                  </svg>
+                </div>
+                <p>Messages</p>
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><div class="icon-element-container">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 24 28">
+                    <title>history</title>
+                    <path
+                      class="filter-white"
+                      d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3"
+                    />
+                  </svg>
+                </div>
+                <p>History</p>
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><div class="icon-element-container">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 24 28">
+                    <title>format-list-checks</title>
+                    <path
+                      class="filter-white"
+                      d="M3,5H9V11H3V5M5,7V9H7V7H5M11,7H21V9H11V7M11,15H21V17H11V15M5,20L1.5,16.5L2.91,15.09L5,17.17L9.59,12.59L11,14L5,20Z"
+                    />
+                  </svg>
+                </div>
+                <p>Tasks</p>
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><div class="icon-element-container">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 24 28">
+                    <title>account-group-outline</title>
+                    <path
+                      class="filter-white"
+                      d="M12,5A3.5,3.5 0 0,0 8.5,8.5A3.5,3.5 0 0,0 12,12A3.5,3.5 0 0,0 15.5,8.5A3.5,3.5 0 0,0 12,5M12,7A1.5,1.5 0 0,1 13.5,8.5A1.5,1.5 0 0,1 12,10A1.5,1.5 0 0,1 10.5,8.5A1.5,1.5 0 0,1 12,7M5.5,8A2.5,2.5 0 0,0 3,10.5C3,11.44 3.53,12.25 4.29,12.68C4.65,12.88 5.06,13 5.5,13C5.94,13 6.35,12.88 6.71,12.68C7.08,12.47 7.39,12.17 7.62,11.81C6.89,10.86 6.5,9.7 6.5,8.5C6.5,8.41 6.5,8.31 6.5,8.22C6.2,8.08 5.86,8 5.5,8M18.5,8C18.14,8 17.8,8.08 17.5,8.22C17.5,8.31 17.5,8.41 17.5,8.5C17.5,9.7 17.11,10.86 16.38,11.81C16.5,12 16.63,12.15 16.78,12.3C16.94,12.45 17.1,12.58 17.29,12.68C17.65,12.88 18.06,13 18.5,13C18.94,13 19.35,12.88 19.71,12.68C20.47,12.25 21,11.44 21,10.5A2.5,2.5 0 0,0 18.5,8M12,14C9.66,14 5,15.17 5,17.5V19H19V17.5C19,15.17 14.34,14 12,14M4.71,14.55C2.78,14.78 0,15.76 0,17.5V19H3V17.07C3,16.06 3.69,15.22 4.71,14.55M19.29,14.55C20.31,15.22 21,16.06 21,17.07V19H24V17.5C24,15.76 21.22,14.78 19.29,14.55M12,16C13.53,16 15.24,16.5 16.23,17H7.77C8.76,16.5 10.47,16 12,16Z"
+                    />
+                  </svg>
+                </div>
+                <p>Communities</p>
+              </div></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="admin-menu">
+        <ul>
+          <li>
+            <a href="#"
+              ><div class="icon-element-container">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 24 28">
+                    <title>cog-outline</title>
+                    <path
+                      class="filter-white"
+                      d="M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10M10,22C9.75,22 9.54,21.82 9.5,21.58L9.13,18.93C8.5,18.68 7.96,18.34 7.44,17.94L4.95,18.95C4.73,19.03 4.46,18.95 4.34,18.73L2.34,15.27C2.21,15.05 2.27,14.78 2.46,14.63L4.57,12.97L4.5,12L4.57,11L2.46,9.37C2.27,9.22 2.21,8.95 2.34,8.73L4.34,5.27C4.46,5.05 4.73,4.96 4.95,5.05L7.44,6.05C7.96,5.66 8.5,5.32 9.13,5.07L9.5,2.42C9.54,2.18 9.75,2 10,2H14C14.25,2 14.46,2.18 14.5,2.42L14.87,5.07C15.5,5.32 16.04,5.66 16.56,6.05L19.05,5.05C19.27,4.96 19.54,5.05 19.66,5.27L21.66,8.73C21.79,8.95 21.73,9.22 21.54,9.37L19.43,11L19.5,12L19.43,13L21.54,14.63C21.73,14.78 21.79,15.05 21.66,15.27L19.66,18.73C19.54,18.95 19.27,19.04 19.05,18.95L16.56,17.95C16.04,18.34 15.5,18.68 14.87,18.93L14.5,21.58C14.46,21.82 14.25,22 14,22H10M11.25,4L10.88,6.61C9.68,6.86 8.62,7.5 7.85,8.39L5.44,7.35L4.69,8.65L6.8,10.2C6.4,11.37 6.4,12.64 6.8,13.8L4.68,15.36L5.43,16.66L7.86,15.62C8.63,16.5 9.68,17.14 10.87,17.38L11.24,20H12.76L13.13,17.39C14.32,17.14 15.37,16.5 16.14,15.62L18.57,16.66L19.32,15.36L17.2,13.81C17.6,12.64 17.6,11.37 17.2,10.2L19.31,8.65L18.56,7.35L16.15,8.39C15.38,7.5 14.32,6.86 13.12,6.62L12.75,4H11.25Z"
+                    />
+                  </svg>
+                </div>
+                <p>Settings</p>
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><div class="icon-element-container">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 24 28">
+                    <title>face-agent</title>
+                    <path
+                      class="filter-white"
+                      d="M18.72,14.76C19.07,13.91 19.26,13 19.26,12C19.26,11.28 19.15,10.59 18.96,9.95C18.31,10.1 17.63,10.18 16.92,10.18C13.86,10.18 11.15,8.67 9.5,6.34C8.61,8.5 6.91,10.26 4.77,11.22C4.73,11.47 4.73,11.74 4.73,12A7.27,7.27 0 0,0 12,19.27C13.05,19.27 14.06,19.04 14.97,18.63C15.54,19.72 15.8,20.26 15.78,20.26C14.14,20.81 12.87,21.08 12,21.08C9.58,21.08 7.27,20.13 5.57,18.42C4.53,17.38 3.76,16.11 3.33,14.73H2V10.18H3.09C3.93,6.04 7.6,2.92 12,2.92C14.4,2.92 16.71,3.87 18.42,5.58C19.69,6.84 20.54,8.45 20.89,10.18H22V14.67H22V14.69L22,14.73H21.94L18.38,18L13.08,17.4V15.73H17.91L18.72,14.76M9.27,11.77C9.57,11.77 9.86,11.89 10.07,12.11C10.28,12.32 10.4,12.61 10.4,12.91C10.4,13.21 10.28,13.5 10.07,13.71C9.86,13.92 9.57,14.04 9.27,14.04C8.64,14.04 8.13,13.54 8.13,12.91C8.13,12.28 8.64,11.77 9.27,11.77M14.72,11.77C15.35,11.77 15.85,12.28 15.85,12.91C15.85,13.54 15.35,14.04 14.72,14.04C14.09,14.04 13.58,13.54 13.58,12.91A1.14,1.14 0 0,1 14.72,11.77Z"
+                    />
+                  </svg>
+                </div>
+                <p>Support</p>
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><div class="icon-element-container">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 24 28">
+                    <title>shield-account-outline</title>
+                    <path
+                      class="filter-white"
+                      d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,3.18L19,6.3V11.22C19,12.92 18.5,14.65 17.65,16.17C16,14.94 13.26,14.5 12,14.5C10.74,14.5 8,14.94 6.35,16.17C5.5,14.65 5,12.92 5,11.22V6.3L12,3.18M12,6A3.5,3.5 0 0,0 8.5,9.5A3.5,3.5 0 0,0 12,13A3.5,3.5 0 0,0 15.5,9.5A3.5,3.5 0 0,0 12,6M12,8A1.5,1.5 0 0,1 13.5,9.5A1.5,1.5 0 0,1 12,11A1.5,1.5 0 0,1 10.5,9.5A1.5,1.5 0 0,1 12,8M12,16.5C13.57,16.5 15.64,17.11 16.53,17.84C15.29,19.38 13.7,20.55 12,21C10.3,20.55 8.71,19.38 7.47,17.84C8.37,17.11 10.43,16.5 12,16.5Z"
+                    />
+                  </svg>
+                </div>
+                <p>Privacy</p>
+              </div></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Main  -->
+    <main class="main">
+      <section class="projects">
+        <h1 class="section-title">Your Projects</h1>
+        <div class="container-projects">
+          <div class="card-project">
+            <div class="content">
+              <div class="description">
+                <h2 class="title">Super cool project</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vitae, quae hic tenetur dolorum earum
+                  aperiam saepe eveniet veniam laudantium perferendis facilis eaque dolor explicabo similique architecto
+                  natus laboriosam molestias.
+                </p>
+              </div>
+              <div class="action-icons">
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon">
+                        <img src="./assets/icons/star-plus-outline.svg" alt="star plus" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon"><img src="./assets/icons/eye-plus-outline.svg" alt="eye plus" /></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#"
+                  ><div class="icon-element-container">
+                    <div class="icon">
+                      <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>share-variant-outline</title>
+                        <path
+                          d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-project">
+            <div class="content">
+              <div class="description">
+                <h2 class="title">Less cool project</h2>
+                <p>
+                  Cumque vitae, quae hic tenetur dolorum earum aperiam saepe eveniet veniam laudantium perferendis
+                  facilis eaque dolor explicabo similique architecto natus laboriosam molestias.
+                </p>
+              </div>
+              <div class="action-icons">
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon">
+                        <img src="./assets/icons/star-plus-outline.svg" alt="star plus" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon"><img src="./assets/icons/eye-plus-outline.svg" alt="eye plus" /></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#"
+                  ><div class="icon-element-container">
+                    <div class="icon">
+                      <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>share-variant-outline</title>
+                        <path
+                          d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-project">
+            <div class="content">
+              <div class="description">
+                <h2 class="title">Impossible App</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+              <div class="action-icons">
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon">
+                        <img src="./assets/icons/star-plus-outline.svg" alt="star plus" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon"><img src="./assets/icons/eye-plus-outline.svg" alt="eye plus" /></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#"
+                  ><div class="icon-element-container">
+                    <div class="icon">
+                      <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>share-variant-outline</title>
+                        <path
+                          d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-project">
+            <div class="content">
+              <div class="description">
+                <h2 class="title">Easy Peasy App</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vitae, quae hic tenetur dolorum earum
+                  aperiam saepe eveniet veniam laudantium perferendis facilis eaque dolor explicabo similique architecto
+                  natus laboriosam molestias.
+                </p>
+              </div>
+              <div class="action-icons">
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon">
+                        <img src="./assets/icons/star-plus-outline.svg" alt="star plus" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon"><img src="./assets/icons/eye-plus-outline.svg" alt="eye plus" /></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#"
+                  ><div class="icon-element-container">
+                    <div class="icon">
+                      <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>share-variant-outline</title>
+                        <path
+                          d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-project">
+            <div class="content">
+              <div class="description">
+                <h2 class="title">Ad Blocker</h2>
+                <p>
+                  Cumque vitae, quae hic tenetur dolorum earum aperiam saepe eveniet veniam laudantium perferendis
+                  facilis eaque dolor explicabo similique architecto natus laboriosam molestias.
+                </p>
+              </div>
+              <div class="action-icons">
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon">
+                        <img src="./assets/icons/star-plus-outline.svg" alt="star plus" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon"><img src="./assets/icons/eye-plus-outline.svg" alt="eye plus" /></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#"
+                  ><div class="icon-element-container">
+                    <div class="icon">
+                      <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>share-variant-outline</title>
+                        <path
+                          d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-project">
+            <div class="content">
+              <div class="description">
+                <h2 class="title">Money Maker</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vitae, quae hic tenetur dolorum earum
+                  aperiam saepe eveniet veniam laudantium perferendis facilis eaque dolor explicabo similique architecto
+                  natus laboriosam molestias.
+                </p>
+              </div>
+              <div class="action-icons">
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon">
+                        <img src="./assets/icons/star-plus-outline.svg" alt="star plus" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="icon-element-container">
+                    <div class="icon">
+                      <div class="icon"><img src="./assets/icons/eye-plus-outline.svg" alt="eye plus" /></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#"
+                  ><div class="icon-element-container">
+                    <div class="icon">
+                      <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>share-variant-outline</title>
+                        <path
+                          d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="side-info">
+        <div class="announcements-section">
+          <h1 class="section-title">Announcements</h1>
+          <div class="container-side-info">
+            <div class="announcement-post">
+              <h2 class="title">Site Maintenance</h2>
+              <p>
+                The site is going under maintenance between the end of December and the beginning of Jamuary. We are
+                sorry for the inconvenience and we hope to see you again.
+              </p>
+            </div>
+            <div class="announcement-post">
+              <h2 class="title">Community Share Day</h2>
+              <p>
+                Ex similique numquam exercitationem dolores, reprehenderit doloremque, voluptatem mollitia tempore...
+              </p>
+            </div>
+            <div class="announcement-post">
+              <h2 class="title">Updated Privacy Policy</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ex molestias voluptatibus facere nobis...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="trending-section">
+          <h1 class="section-title">Trending</h1>
+          <div class="container-side-info">
+            <div class="user">
+              <div class="user-avatar">
+                <img src="./assets/images/avatar-1295773_640.png" alt="dog with collar" class="user-avatar-img" />
+              </div>
+              <div class="user-info">
+                <p class="user-nickname">@someone</p>
+                <p class="user-full-name">someone full name</p>
+              </div>
+            </div>
+            <div class="user">
+              <div class="user-avatar">
+                <img src="./assets/images/man-5996080_640.jpg" alt="expert fighter man" class="user-avatar-img" />
+              </div>
+              <div class="user-info">
+                <p class="user-nickname">@somelse</p>
+                <p class="user-full-name">someone else full name</p>
+              </div>
+            </div>
+            <div class="user">
+              <div class="user-avatar">
+                <img src="./assets/images/man-1776934_640.png" alt="warrion man" class="user-avatar-img" />
+              </div>
+              <div class="user-info">
+                <p class="user-nickname">@someone</p>
+                <p class="user-full-name">someone full name</p>
+              </div>
+            </div>
+            <div class="user">
+              <div class="user-avatar">
+                <img src="./assets/images/starwars-2020624_640.png" alt="old man with hood" class="user-avatar-img" />
+              </div>
+              <div class="user-info">
+                <p class="user-nickname">@someone</p>
+                <p class="user-full-name">someone full name</p>
+              </div>
+            </div>
+            <div class="user">
+              <div class="user-avatar">
+                <img src="./assets/images/woman-6242836_640.png" alt="african woman" class="user-avatar-img" />
+              </div>
+              <div class="user-info">
+                <p class="user-nickname">@someone</p>
+                <p class="user-full-name">someone full name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Image by <a href="https://pixabay.com/users/notrod69-9586599/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7706071">matt dorton</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7706071">Pixabay</a> -->
+    <!-- Image by <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1295773">OpenClipart-Vectors</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1295773">Pixabay</a></ -->
+    <!-- Image by <a href="https://pixabay.com/users/larisons2006-11724901/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5996080">Макс</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5996080">Pixabay</a> -->
+    <!-- Image by <a href="https://pixabay.com/users/silviap_design-1583911/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1776934">Silvia</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1776934">Pixabay</a>   -->
+    <!-- Image by <a href="https://pixabay.com/users/theseriesguy-3928209/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2020624">Series Guy</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2020624">Pixabay</a>   -->
+    <!-- Image by <a href="https://pixabay.com/users/eleatell-15115856/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6242836">Myriam - No AI pictures in my gallery.</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6242836">Pixabay</a>   -->
+  </body>
+</html>
