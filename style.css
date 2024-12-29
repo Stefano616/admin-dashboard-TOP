@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: "Comic Sans MS", "Comic Sans", "cursive";
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 0.5fr 4fr;
@@ -27,6 +28,9 @@ img {
 
 .user-info-medium .avatar-img {
   width: 4rem;
+}
+.user-full-name {
+  font-weight: 600;
 }
 
 .icon {
@@ -97,6 +101,16 @@ img {
   grid-column: 1/4;
 }
 
+.user-info-small .icon {
+  transition: all 0.2s ease-in-out;
+}
+
+.user-info-small .icon:hover {
+  cursor: pointer;
+  scale: 1.05;
+  animation: ringAnimation 0.7s linear;
+}
+
 .header input,
 .header button {
   font-size: 1.2rem;
@@ -107,6 +121,13 @@ img {
   border: transparent;
   background-color: #1992d4;
   color: white;
+  transition: all 0.2s;
+}
+
+.header button:hover {
+  cursor: pointer;
+  scale: 1.1;
+  box-shadow: 0px 5px 5px rgba(66, 68, 90, 1);
 }
 
 .header input[type="search"] {
@@ -115,7 +136,18 @@ img {
   border: transparent;
   width: 90%;
   height: 2rem;
-  padding: 0.5rem;
+  padding: 0.7rem;
+  transition: all 0.2s;
+}
+
+.header input[type="search"]:hover,
+.header input[type="search"]:focus {
+  cursor: pointer;
+  scale: 1.02;
+  transform: translate(0px -5px);
+  outline: transparent;
+  border: 2px solid rgb(25, 146, 212, 0.5);
+  box-shadow: 0px 2px 5px rgba(66, 68, 90, 1);
 }
 
 .sidebar {
@@ -131,6 +163,11 @@ img {
 .sidebar a {
   color: #ffffff;
   font-size: 1.2rem;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.sidebar a:hover {
+  transform: translate(16px, 0px);
 }
 .sidebar h1 {
   font-size: 2.5rem;
@@ -170,6 +207,10 @@ ul a {
   -webkit-box-shadow: 0px 3px 10px -5px rgba(66, 68, 90, 1);
   -moz-box-shadow: 0px 3px 10px -5px rgba(66, 68, 90, 1);
   box-shadow: 0px 3px 10px -5px rgba(66, 68, 90, 1);
+  transition: all 0.2s;
+}
+.card-project:hover {
+  transform: translate(0px, -0.7rem);
 }
 .card-project .title {
   font-size: 1.2rem;
@@ -196,6 +237,13 @@ ul a {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  transition: all 0.2s;
+}
+
+.action-icons a:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  scale: 1.3;
 }
 
 .side-info {
@@ -221,6 +269,13 @@ ul a {
 
 .announcement-post {
   text-align: left;
+  transition: all 0.2s;
+}
+
+.announcement-post:hover,
+.user:hover {
+  cursor: pointer;
+  scale: 1.05;
 }
 
 .announcement-post p {
@@ -242,8 +297,37 @@ ul a {
   grid-template-columns: 1fr 3fr;
   align-items: center;
   margin-bottom: 1rem;
+  transition: all 0.2s;
 }
 
 .user .user-avatar {
   width: 2rem;
+}
+
+@keyframes ringAnimation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  20% {
+    transform: rotate(8deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
+  }
 }
